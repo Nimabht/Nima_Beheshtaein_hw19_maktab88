@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/polipop/dist/css/polipop.core.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/polipop/dist/css/polipop.default.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo Application</title>
+  </head>
+  <body>
+    <div
+      class="container w-75 h-50 bg-white mt-4 p-3 rounded-5 d-flex flex-column">
+      <p class="display-2 text-center">My Todo list</p>
+      <div class="align-self-center w-50 text-center">
+        <label>Filter:</label>
+        <input type="text" class="inp w-auto p-2 my-2" id="search-inp" />
+        <button
+          type="button"
+          id="showModal"
+          class="btn btn-success"
+          data-toggle="modal"
+          data-target="#Modal">
+          Add new Task
+        </button>
+        <button
+          type="button"
+          class="btn btn-warning"
+          onclick="deleteAllTasks()">
+          Delete all tasks
+        </button>
+        <!-- New Modal -->
+        <div
+          class="modal fade"
+          id="Modal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add new Task</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="title-inp">Title:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="title-inp"
+                    placeholder="You can do it" />
+                </div>
+                <div class="form-group">
+                  <label for="description-inp">Description:</label>
+                  <textarea
+                    class="form-control"
+                    id="description-inp"
+                    placeholder="I can do it if i ..."
+                    rows="3"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal">
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="addNewTask(todoList)">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- New Modal -->
+        <!-- update Modal -->
+        <div
+          class="modal fade"
+          id="updateModal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update task</h5>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="title-inp">Title:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="update-title-inp" />
+                </div>
+                <div class="form-group">
+                  <label for="description-inp">Description:</label>
+                  <textarea
+                    class="form-control"
+                    id="update-description-inp"
+                    rows="3"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal">
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="updateTask(todoList)">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- update Modal -->
+      </div>
+      <div
+        class="task-cards shadow d-flex flex-column gap-3 p-4 rounded-5"></div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/polipop/dist/polipop.min.js"></script>
+  <script src="./dist/class defenitions.js"></script>
+  <script src="./dist/searchTask.js"></script>
+  <script src="./dist/renderTodoList.js"></script>
+  <script src="./dist/deleteAllTasks.js"></script>
+  <script src="./dist/deleteTask.js"></script>
+  <script src="./dist/resetModal.js"></script>
+  <script src="./dist/addNewTask.js"></script>
+  <script src="./dist/renderUpdateModal.js"></script>
+  <script src="./dist/updateTask.js"></script>
+  <script src="./dist/main.js"></script>
+</html>

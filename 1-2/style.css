@@ -1,0 +1,23 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #a48ee9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%23A48EE9' width='11' height='11'/%3E%3Crect fill='%23a38de9' x='10' width='11' height='11'/%3E%3Crect fill='%23a38bea' y='10' width='8' height='8'/%3E%3Crect fill='%23a28aea' x='20' width='11' height='11'/%3E%3Crect fill='%23a188ea' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23a187eb' y='20' width='11' height='11'/%3E%3Crect fill='%23a085eb' x='30' width='11' height='11'/%3E%3Crect fill='%23a084eb' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%239f82ec' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%239e81ec' y='30' width='11' height='11'/%3E%3Crect fill='%239e7fec' x='40' width='11' height='11'/%3E%3Crect fill='%239d7eec' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%239d7ced' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%239c7bed' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%239c79ed' y='40' width='11' height='11'/%3E%3Crect fill='%239b78ed' x='50' width='11' height='11'/%3E%3Crect fill='%239b76ee' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%239a75ee' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%239a73ee' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%239972ee' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%239970ee' y='50' width='11' height='11'/%3E%3Crect fill='%23986eef' x='60' width='11' height='11'/%3E%3Crect fill='%23986def' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23976bef' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%239769ef' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%239668ef' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%239666ef' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%239664ef' x='70' width='11' height='11'/%3E%3Crect fill='%239563f0' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%239561f0' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23945ff0' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23945df0' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23945cf0' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23935af0' x='80' width='11' height='11'/%3E%3Crect fill='%239358f0' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%239356f0' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%239254f0' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%239252f0' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%239250f0' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23924ef0' x='90' width='11' height='11'/%3E%3Crect fill='%23914cf0' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23914af0' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%239148f0' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%239146f0' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%239044f0' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%239041f0' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23903ff0' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23903df0' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%238f3af0' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%238f37f0' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%238f35ef' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%238f32ef' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%238f2fef' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%238f2cef' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%238f28ef' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%238e25ef' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%238e21ef' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%238e1cee' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%238e17ee' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%238E10EE' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.task-cards {
+  height: 35rem;
+  overflow: auto;
+}
+
+.h5 {
+  word-wrap: break-word;
+}
+
+.init-bg-success {
+  background-color: rgba(155, 248, 155, 0.452);
+}
+.init-bg-danger {
+  background-color: rgba(250, 164, 164, 0.499);
+}
