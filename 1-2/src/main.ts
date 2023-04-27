@@ -1,6 +1,5 @@
-    let todoList=TodoList.fromLocalStorage
-    console.log();
-    
+    let todoList:TodoList|null =TodoList.fromLocalStorage
+
     if(!!todoList){
         console.log("Todolist loaded");
     }

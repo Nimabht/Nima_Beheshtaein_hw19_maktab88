@@ -1,8 +1,8 @@
 const renderTodoList = (tasks:Task[]):void=>{
     $(".task-cards").html("")
    tasks.forEach(task => {
-       const dateStr = task.createdAt;
-      const date = new Date(dateStr);
+       const dateStr:Date = task.createdAt;
+      const date:Date = new Date(dateStr);
       const options:Intl.DateTimeFormatOptions = { 
         year: 'numeric', 
         month: 'long', 
@@ -13,9 +13,9 @@ const renderTodoList = (tasks:Task[]):void=>{
         hour12: true,
         timeZoneName: 'short'
       };
-    const formattedDate = date.toLocaleDateString('en-US',options);
-    const bodyClass=(task.status?"task-card init-bg-success border-1 border-black border rounded shadow p-2":"task-card init-bg-danger border-1 border-black border rounded shadow p-2")
-        const statusClass=(task.status?"btn btn-success bi bi-check-lg":"btn btn-danger bi bi-x-lg")
+    const formattedDate:string = date.toLocaleDateString('en-US',options);
+    const bodyClass:string =(task.status?"task-card init-bg-success border-1 border-black border rounded shadow p-2":"task-card init-bg-danger border-1 border-black border rounded shadow p-2")
+        const statusClass:string=(task.status?"btn btn-success bi bi-check-lg":"btn btn-danger bi bi-x-lg")
         $(".task-cards").append(`
         <div class="${bodyClass}">
           <p class="display-6 ">${task.title}</p>

@@ -1,6 +1,5 @@
 "use strict";
 let todoList = TodoList.fromLocalStorage;
-console.log();
 if (!!todoList) {
     console.log("Todolist loaded");
 }

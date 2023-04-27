@@ -1,6 +1,6 @@
 const renderUpdateModal = (id:string|number):void=>{ 
   if(!!todoList){
-        const task=todoList.tasks.find((task)=>
+        const task:Task|undefined=todoList.tasks.find((task)=>
             task.id==id
         )
         if(!!task){ 
